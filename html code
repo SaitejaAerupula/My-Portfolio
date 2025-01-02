@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiteja's Portfolio</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<body>
+    <header>
+        <h1>Saiteja Aerupula</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQGCt2fHA-ycKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714801059554?e=2147483647&v=beta&t=g83tSmnEZPaqZhhpDbc5QKCC26q6hMQZDUdVLFHBeZQ" alt="Profile Image" class="profile-img">
+        <p>Hello! I am a  Computer Science student passionate about web development, AI, and open-source contributions.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, Java, C++</li>
+            <li>Web Development: HTML, CSS, JavaScript, React</li>
+            <li>Database Management: MySQL, MongoDB</li>
+            <li>Tools: Git, Docker</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>Developed a personal portfolio website using HTML, CSS, and JavaScript.</p>
+            <a href="https://github.com/Saiteja7360/portfolio">GitHub Repository</a>
+        </div>
+        <div class="project">
+            <h3>Project 2: Chat Application</h3>
+            <p>Created a real-time chat application using React and Firebase.</p>
+            <a href="https://github.com/Saiteja7360/chat-app">GitHub Repository</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="experience">
+        <h2>Achievements</h2>
+        <div class="experience">
+            <h3>Intern at Tech Company</h3>
+            <p>Worked on developing web applications and improving software performance.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: saiteja@example.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/saiteja">linkedin.com/in/saiteja</a></p>
+        <p>GitHub: <a href="https://github.com/Saiteja7360">github.com/Saiteja7360</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Saiteja. All rights reserved.</p>
+    </footer>
+</body>
+</html>
