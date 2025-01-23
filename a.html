@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="container">
+    <form class="Contact-form">
+        <h2> Contact us</h2>
+        <div class="form-group">
+          <label for="name">name</label>
+          <input type="text" id="name" name="name"/>
+        </div>
+        <div class="form-group">
+            <label for "email">email</label>
+            <input type="email" id ="email" name="email"/>
+        </div>
+        <div class="form-group">
+          <label   for="subject">subject</label>
+          <input type="text" id="subject" name="subject"/>
+        </div>
+        <div>
+            <label   for="message">message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+
+
+    </form>
+  </div>  
+</body>
+,<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        document.querySelector(".container").classList.add("active");
+    });
+</script>
+</html>
