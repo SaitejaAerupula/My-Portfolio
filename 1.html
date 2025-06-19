@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saiteja Aerupula | Portfolio</title>
+  <style>
+    :root {
+      --primary: #2d3a4a;
+      --accent: #1abc9c;
+      --bg: #f7fafc;
+      --white: #fff;
+      --shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+      --text: #333;
+      --light-text: #777;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(120deg, var(--primary) 60%, var(--accent) 100%);
+      color: var(--white);
+      padding: 40px 0 20px 0;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid var(--white);
+      box-shadow: 0 8px 24px rgba(44, 62, 80, 0.13);
+      animation: float 4s ease-in-out infinite;
+      background: var(--white);
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0);}
+      50% { transform: translateY(-18px);}
+    }
+    .header-text h1 {
+      font-size: 2.7rem;
+      margin: 0 0 10px 0;
+      font-weight: 600;
+    }
+    .header-text p {
+      font-size: 1.2rem;
+      margin: 0 0 8px 0;
+      opacity: 0.9;
+    }
+    .tagline {
+      font-style: italic;
+      color: #e0f7fa;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .contact-info a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 0 20px;
+    }
+    section {
+      background: var(--white);
+      margin-bottom: 28px;
+      padding: 28px 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s, transform 0.7s;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: var(--accent);
+      margin-bottom: 18px;
+      font-size: 1.45rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+      letter-spacing: 1px;
+    }
+    .skills-list, .certs-list, .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .skill, .cert, .social-link {
+      background: var(--accent);
+      color: var(--white);
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 0.97rem;
+      text-decoration: none;
+      transition: background 0.25s;
+    }
+    .skill:hover, .cert:hover, .social-link:hover {
+      background: var(--primary);
+    }
+    .timeline {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline li {
+      margin-bottom: 16px;
+    }
+    .timeline .role {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .timeline .org {
+      color: var(--accent);
+    }
+    .timeline .date {
+      color: var(--light-text);
+      font-size: 0.9rem;
+      margin: 3px 0 5px 0;
+    }
+    .projects-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .projects-list li {
+      margin-bottom: 16px;
+    }
+    .projects-list li h3 {
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+    .projects-list li p {
+      margin: 4px 0;
+      color: var(--light-text);
+      font-size: 0.95rem;
+    }
+    .footer {
+      text-align: center;
+      padding: 30px 0 15px 0;
+      color: #888;
+      font-size: 1rem;
+      margin-top: 40px;
+    }
+    @media (max-width: 700px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .header-text h1 {
+        font-size: 2rem;
+      }
+      main {
+        padding: 16px 5px 0 5px;
+      }
+      section {
+        padding: 18px 10px;
+      }
+      .profile-img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQEu5uiQgjxcKA/profile-displayphoto-shrink_400_400/B56ZcU.Bo1HUAg-/0/1748403494626?e=1755734400&v=beta&t=SXvlqg2z-NZT-7ejqv1irF09AUz-Ok_QQ42zpNYdN_M" alt="Saiteja Aerupula" class="profile-img">
+      <div class="header-text">
+        <h1>Saiteja Aerupula</h1>
+        <div class="tagline">Frontend Developer Intern | CSE Student | Tech Enthusiast</div>
+        <p>Hyderabad, Telangana, India</p>
+        <div class="contact-info">
+          <a href="mailto:aerupulasaiteja@gmail.com">aerupulasaiteja@gmail.com</a>
+          <a href="tel:7569816083">(+91) 7569816083</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="animate">
+      <h2>Profile</h2>
+      <p>
+        Enthusiastic and motivated Computer Science and Engineering student with a strong foundation in programming, software development, and problem-solving. Eager to apply my technical skills and passion for technology to contribute to innovative projects in the software industry. Committed to continuous learning and professional growth, with a keen interest in collaborating within dynamic teams to achieve organizational goals.
+      </p>
+    </section>
+    <section class="animate">
+      <h2>Technical Skills</h2>
+      <div class="skills-list">
+        <span class="skill">Python</span>
+        <span class="skill">Java (Basics)</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Flask (Basic)</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">VS Code</span>
+        <span class="skill">Eclipse</span>
+        <span class="skill">Windows</span>
+        <span class="skill">Linux</span>
+      </div>
+    </section>
+    <section class="animate">
+      <h2>Professional Experience</h2>
+      <ul class="timeline">
+        <li>
+          <span class="role">Frontend Developer Intern</span> <span class="org">@ Ceeras</span><br>
+          <span class="date">Feb 2025 – June 2025 (Remote, Andhra Pradesh)</span><br>
+          Developed and maintained the user interface for a book recommendation blog using HTML, CSS, and JavaScript. Collaborated with backend developers and designers to create a responsive and visually appealing website. Gained hands-on experience with version control (Git) and agile development practices.
+        </li>
+      </ul>
+    </section>
+    <section class="animate">
+      <h2>Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <h3>Weather Prediction Site</h3>
+          <p>Developed a user-friendly weather application using HTML, CSS5, and JavaScript.</p>
+          <p>Integrated real-time weather data by consuming OpenWeatherMap API. Implemented features such as location-based weather updates, temperature display, and weather condition icons.</p>
+        </li>
+        <li>
+          <h3>Chatbot Application</h3>
+          <p>Developed an interactive chatbot using Python, implementing core NLP techniques.</p>
+          <p>Utilized libraries such as NLTK for text preprocessing, tokenization, and intent classification. Integrated the chatbot with a simple user interface for real-time conversation.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="animate">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <span class="role">B.Tech, Computer Science and Engineering</span> <span class="org">@ St Peters Engineering College, Hyderabad</span><br>
+          <span class="date">2022 – 2026 (CGPA: 8.60 till 3-I)</span>
+        </li>
+        <li>
+          <span class="role">Intermediate</span> <span class="org">@ Sri Chaitanya Junior College</span><br>
+          <span class="date">2022 (CGPA: 8.4)</span>
+        </li>
+        <li>
+          <span class="role">SSC</span> <span class="org">@ Sri Vivekananda High School</span><br>
+          <span class="date">2020 (CGPA: 10.0)</span>
+        </li>
+      </ul>
+    </section>
+    <section class="animate">
+      <h2>Certifications</h2>
+      <div class="certs-list">
+        <span class="cert">Certified System Administrator – ServiceNow (June 2025)</span>
+        <span class="cert">Data Structures & Algorithms with Java – Infosys Springboard (2024)</span>
+        <span class="cert">Google Cloud Computing Foundations (2025)</span>
+        <span class="cert">Cyber Security – Google (2024)</span>
+        <span class="cert">Front-End Development – Coursera (2024)</span>
+      </div>
+    </section>
+    <section class="animate">
+      <h2>Key Strengths</h2>
+      <ul>
+        <li><strong>Problem-Solving:</strong> Strong analytical and troubleshooting abilities</li>
+        <li><strong>Team Collaboration & Leadership:</strong> Effective communicator and adaptable team player</li>
+        <li><strong>Time Management & Efficiency:</strong> Prioritization and meeting deadlines in fast-paced environments</li>
+      </ul>
+    </section>
+    <section class="animate">
+      <h2>Connect</h2>
+      <div class="social-links">
+        <a class="social-link" href="mailto:aerupulasaiteja@gmail.com">Email</a>
+        <a class="social-link" href="https://github.com/saitejaaerupula" target="_blank">GitHub</a>
+        <a class="social-link" href="https://linkedin.com/in/aerupula-saiteja-29a327277" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+  <div class="footer">
+    &copy; 2025 Saiteja Aerupula. All rights reserved.
+  </div>
+  <script>
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.animate');
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.92;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < trigger) {
+          sec.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
+</html>
